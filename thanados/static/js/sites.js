@@ -202,7 +202,13 @@ $(document).ready(function () {
         heat.setLatLngs(heatmarkers);
         if (resultLenght.length > 0) map.fitBounds(mymarkers.getBounds());
 
-        interpretation = {
+
+
+    });
+})
+;
+
+interpretation = {
             "type": "FeatureCollection",
             "name": "wege",
             "features": [
@@ -375,7 +381,3 @@ $(document).ready(function () {
                 }
             ]
         }
-
-    });
-})
-;
