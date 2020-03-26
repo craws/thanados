@@ -29,6 +29,8 @@ $(document).ready(function () {
     });
     attributionChange();
 
+    var interpret_layers = L.geoJSON(interpretation).addTo(map);
+
     //initiate markers
     heatmarkers = []
     mymarkers = new L.featureGroup([]);
