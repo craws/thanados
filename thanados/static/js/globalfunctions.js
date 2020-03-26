@@ -140,9 +140,9 @@ $(document).ready(function () {
 
 function setlogo() {
     if (($(window).width()) > 767) {
-        $('#nav-logo').attr("src", "/static/images/icons/logo_big.png");
+        $('#nav-logo').attr("src", "/static/images/icons/MeDeVil_red.png");
     } else {
-        $('#nav-logo').attr("src", "/static/images/icons/logo_small.png");
+        $('#nav-logo').attr("src", "/static/images/icons/MDV_red.png");
     }
 }
 
