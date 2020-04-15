@@ -5,11 +5,11 @@
         </h2>
 
 
-
-        <h2 class="my-heading container">Medieval Deserted Villages Project</h2>
-
-
         <div id="personlist" class="container with-margin">
+            <input type="text" id="nameSearch" class="form-control mb-sm-2" onkeyup="searchFunction()" placeholder="Search Name"
+                   aria-label="Name"
+                   style="align: center; width: 300px">
+
             <ul class="list-group" id="personsHere">
 
             </ul>
@@ -28,4 +28,28 @@
         var persons = {{ person_data|tojson }};
     </script>
     <script src="/static/js/playground.js"></script>
+    <script>
+        function searchFunction() {
+            // Declare variables
+            var input, filter, ul, li, a, i, txtValue;
+            input = document.getElementById('nameSearch');
+            filter = input.value.toUpperCase();
+            ul = document.getElementById("personsHere");
+            li = ul.getElementsByTagName('li');
+
+            // Loop through all list items, and hide those who don't match the search query
+            for (i = 0; i < li.length; i++) {
+                a = li[i].getElementsByTagName("a")[0];
+                txtValue = a.textContent || a.innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    li[i].style.display = "";
+                } else {
+                    li[i].style.display = "none";
+                }
+            }
+        }
+    </script>
+
+
+
 {% endblock %}

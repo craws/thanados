@@ -6,7 +6,7 @@
     <meta name="description" content="">
     <title>Medieval Deserted Villages</title>
 
-    <link rel="icon" href="/static/MDV.ico">
+    <link rel="icon" href="/static/favicon.ico">
     <link href="/static/vendor/node_modules/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
     <link href="/static/vendor/node_modules/leaflet/dist/leaflet.css" rel="stylesheet"/>
     <script src="/static/vendor/node_modules/leaflet/dist/leaflet.js"></script>
@@ -59,20 +59,20 @@
         <div class="collapse navbar-collapse" id="navbarsExampleDefault">
             <ul class="navbar-nav mr-auto">
                 {#% if current_user.is_authenticated %#}
-                <li class="nav-item d-none">
+                <li class="nav-item" style="margin-right: 2em">
                     <a class="nav-link" href="{{ url_for('sites') }}">Sites</a>
                 </li>
                 <li class="nav-item d-none">
                     <a class="nav-link" href="{{ url_for('charts') }}">Charts</a>
                 </li>
-                <li class="nav-item d-none">
+                <li class="nav-item" style="margin-right: 2em">
                     <a class="nav-link" href="{{ url_for('search') }}">Search</a>
                 </li>
                 <li class="nav-item" style="margin-right: 2em">
-                    <a class="nav-link" href="{{ url_for('playground') }}">MDV</a>
+                    <a class="nav-link" href="{{ url_for('playground') }}">Data</a>
                 </li>
                 <li class="nav-item" style="margin-right: 2em">
-                    <a class="nav-link" href="{{ url_for('sites') }}">Map</a>
+                    <a class="nav-link" href="{{ url_for('playground') }}">Map</a>
                 </li>
                 <li class="nav-item" style="margin-right: 2em">
                     <a class="nav-link" href="{{ url_for('about') }}">About</a>
