@@ -69,11 +69,44 @@
                 </li>
 
                 <li>
-                    <a href="#charts">
+                    <a href="#chartsSubmenu"
+                       onclick="document.getElementById('charts').scrollIntoView()"
+                       data-toggle="collapse" aria-expanded="false"
+                       class="dropdown-toggle">
                         <i class="fas fa-chart-bar"></i>
                         Charts
                     </a>
+                    <ul class="collapse list-unstyled" id="chartsSubmenu">
+                        <li>
+                            <a href="#chartsDepth">Depth of graves</a>
+                        </li>
+                        <li>
+                            <a href="#chartsSex">Sex of individuals</a>
+                        </li>
+                        <li>
+                            <a href="#chartsOrientation">Orientation of skeletons</a>
+                        </li>
+                        <li>
+                            <a href="#chartsAzimuth">Azimuth of gravepits</a>
+                        </li>
+                        <li>
+                            <a href="#chartsAge">Age at death</a>
+                        </li>
+                        <li>
+                            <a href="#chartsFeatures">Types of features</a>
+                        </li>
+                        <li>
+                            <a href="#chartsConstruction">Grave construction</a>
+                        </li>
+                        <li>
+                            <a href="#chartsFinds">Types of finds</a>
+                        </li>
+                        <li>
+                            <a href="#chartsBurials">Burial types</a>
+                        </li>
+                    </ul>
                 </li>
+
 
                 <li>
                     <a href="#searchSubmenu"
@@ -127,53 +160,71 @@
                         Select a specific site/cemetery:</p>
 
                     <div class="imagebox img-fluid">
-                    <img data-gifffer="static/images/manual/sites.gif" data-gifffer-width="100%">
+                        <img data-gifffer="static/images/manual/sites.gif" data-gifffer-width="100%">
                     </div>
-                        <p> Clicking the name in the list gets you to the <a href="#entity">detailed site view</a>.</p>
-                    <p> The map <i class="text-primary fas fa-map-marked-alt"></i> icon gets you to the detailed <a href="#maps">map</a> of the
+                    <p> Clicking the name in the list gets you to the <a href="#entity">detailed site view</a>.</p>
+                    <p> The map <i class="text-primary fas fa-map-marked-alt"></i> icon gets you to the detailed <a
+                            href="#maps">map</a> of the
                         cemetery.</p>
-                    <p>Moving the cursor over the name in the list will highlight a map marker on the site's position and show a description of the
+                    <p>Moving the cursor over the name in the list will highlight a map marker on the site's position
+                        and show a description of the
                         site in a tooltip.</p>
-                    <p>You can filter the list by entering text (E.g. names or categories) into the <b>search field</b> and by adjusting the
+                    <p>You can filter the list by entering text (E.g. names or categories) into the <b>search field</b>
+                        and by adjusting the
                         “begin” and “end” timespans of the respective sites with the <b>time sliders</b></p>
                     <p>On the map the sites are shown as well and can be selected by clicking on the respective markers.<br>
-                        With the top right button of the map you can select between markers, clustered markers and a density representation of the
+                        With the top right button of the map you can select between markers, clustered markers and a
+                        density representation of the
                         sites.</p>
-                    <p>Furthermore, you also can sort the site list alphabetically by <b>name</b>, <b>type</b>, <b>begin</b> or
+                    <p>Furthermore, you also can sort the site list alphabetically by <b>name</b>, <b>type</b>,
+                        <b>begin</b> or
                         <b>end</b> time as well as by the count of <b>graves</b></p>
-                    <p>The list length can be adjusted at the top and you can select the list pages at the bottom of the list.</p>
+                    <p>The list length can be adjusted at the top and you can select the list pages at the bottom of the
+                        list.</p>
                 </div>
                 <div class="pt-3" id="entity">
                     <div class="manualbox">
 
                         <h3>Detailed View</h3>
-                        <p> Each entity (cemetery, grave, burial, find - see <a href="#datamodel">data model</a> for further information)
-                            in the database has its own detailed page with a <b>permanent link</b>. This page can be accessed from throughout the
-                            whole application either by clicking the entity's link in the respective lists or the link icon
+                        <p> Each entity (cemetery, grave, burial, find - see <a href="#datamodel">data model</a> for
+                            further information)
+                            in the database has its own detailed page with a <b>permanent link</b>. This page can be
+                            accessed from throughout the
+                            whole application either by clicking the entity's link in the respective lists or the link
+                            icon
                             <i class="fas fa-link"> </i> (e.g from within the map view).
-                            Here you get a structured overview including descriptions, classifications, spatial and chronological position along with
-                            subunits and further metadata (e.g. bibliographical sources, external references etc.). Moving the cursor over a
+                            Here you get a structured overview including descriptions, classifications, spatial and
+                            chronological position along with
+                            subunits and further metadata (e.g. bibliographical sources, external references etc.).
+                            Moving the cursor over a
                             certain element will display a tooltip with further explanations.
                         </p>
                         <div class="imagebox img-fluid">
-                        <img data-gifffer="static/images/manual/subunits.gif" data-gifffer-width="100%" data-gifffer-height="auto">
+                            <img data-gifffer="static/images/manual/subunits.gif" data-gifffer-width="100%"
+                                 data-gifffer-height="auto">
                         </div>
-                            <p>
-                            <i class="btn-secondary btn-sm fas fa-quote-right"></i> displays information on the copyright respectively a
+                        <p>
+                            <i class="btn-secondary btn-sm fas fa-quote-right"></i> displays information on the
+                            copyright respectively a
                             recommendation on how
                             to cite this page.</p>
                         <p>
-                            <i class="btn-secondary btn-sm fas fa-download"></i> saves a GeoJSON file of the entity to your computer.</p>
+                            <i class="btn-secondary btn-sm fas fa-download"></i> saves a GeoJSON file of the entity to
+                            your computer.</p>
                         <p>
-                            <span class="btn-secondary btn-xs">Map</span> opens the map of the cemetery containing the entity.
+                            <span class="btn-secondary btn-xs">Map</span> opens the map of the cemetery containing the
+                            entity.
                         </p>
                         <p>
-                            If available, images of the entity are shown next to the description. In case there is more than one image there are
-                            slider buttons to navigate. Clicking the images opens them in a popup. The source of the image is shown as
+                            If available, images of the entity are shown next to the description. In case there is more
+                            than one image there are
+                            slider buttons to navigate. Clicking the images opens them in a popup. The source of the
+                            image is shown as
                             tooltip respectively in the popup.
                         </p>
                         <p>
-                            A static map with the entity's position and the site's location on a mini map is shown next to it. Clicking into the map
+                            A static map with the entity's position and the site's location on a mini map is shown next
+                            to it. Clicking into the map
                             also opens the detailed and interactive cemetery map.
                         </p>
 
@@ -191,7 +242,8 @@
                         <h4 id="catalogue">Catalogue</h4>
                         <p>
                             By selecting the <b>catalogue</b> tab, the view changes to a catalogue view which lists not
-                            only the next but all subunits, contained in the parent unit down to the find-level. From here, again the <a
+                            only the next but all subunits, contained in the parent unit down to the find-level. From
+                            here, again the <a
                                 href="#entity">detailed view</a>
                             of the respective unit can be accessed by clicking on the <b>entity name</b>.
                         </p>
@@ -205,7 +257,8 @@
                         </p>
                         <img class="img-fluid" src="static/images/manual/metadata.jpg" alt="Metadata">
                         <p>
-                            Wherever possible, THANADOS provides its content under a <a href="http://creativecommons.org/licenses/by/4.0/"> Creative
+                            Wherever possible, THANADOS provides its content under a <a
+                                href="http://creativecommons.org/licenses/by/4.0/"> Creative
                             Commons Attribution 4.0 International License</a>. Of course,
                             if for certain objects another copyright applies this is documented in the database and
                             shown in the frontend.
@@ -219,14 +272,18 @@
                 <div class="manualbox">
                     <h3>Maps</h3>
                     <p>
-                        Each cemetery in THANADOS has its own map representation with a permanent link. It can be accessed either from
-                        the <a href="#entity">detailed view</a> or via the map <i class="text-primary fas fa-map-marked-alt"></i> icon
+                        Each cemetery in THANADOS has its own map representation with a permanent link. It can be
+                        accessed either from
+                        the <a href="#entity">detailed view</a> or via the map <i
+                            class="text-primary fas fa-map-marked-alt"></i> icon
                         in the list on the <a href="#sites">sites</a> page.
                     </p>
                     <img class="img-fluid" src="static/images/manual/map.jpg" alt="Map">
                     <p>
-                        Depending on the spatial information that is available for each cemetery the respective graves are displayed
-                        here as polygons on a background map. Given the case, that the graves' locations are not documented, then only
+                        Depending on the spatial information that is available for each cemetery the respective graves
+                        are displayed
+                        here as polygons on a background map. Given the case, that the graves' locations are not
+                        documented, then only
                         the cemetery's approximate center is shown as a marker on the map.
                     </p>
                     <h4 id="mapOptions">Options</h4>
@@ -237,15 +294,20 @@
                         <i class="btn-secondary btn-sm fas fa-exchange-alt"></i> shows/hides the <a href="#mapSidebar">sidebar</a>.
                     </p>
                     <p>
-                        <i class="btn-secondary btn-sm fas fa-quote-right"></i> displays a citation recommendation and copyright info.
+                        <i class="btn-secondary btn-sm fas fa-quote-right"></i> displays a citation recommendation and
+                        copyright info.
                     </p>
                     <p>
-                        <i class="btn-secondary btn-sm fas fa-image"></i> allows you to download the map as image file either in
+                        <i class="btn-secondary btn-sm fas fa-image"></i> allows you to download the map as image file
+                        either in
                         A4 portrait or A4 landscape format. The image quality depends on your screen resolution.
-                        Please note that in some browsers the map background is not rendered completely on the first try.
+                        Please note that in some browsers the map background is not rendered completely on the first
+                        try.
                         If your exported image shows blank parts please repeat the export.
-                        Currently only the map and its content (graves, markers...) are exported. If you need the legend as well as
-                        buttons and other map elements that are shown on your screen, you could create a screenshot. Also here the
+                        Currently only the map and its content (graves, markers...) are exported. If you need the legend
+                        as well as
+                        buttons and other map elements that are shown on your screen, you could create a screenshot.
+                        Also here the
                         resolution of the image depends on your screen resolution.
                     </p>
                     <p>
@@ -253,11 +315,14 @@
                         data. See <a href="#mapSearch"> Map Search</a> for further details.
                     </p>
                     <p>
-                        <i class="btn-secondary btn-xs pr-2 pl-2"><img height="15px" src="static/images/icons/layers.png" alt=""></i> in the top left corner
+                        <i class="btn-secondary btn-xs pr-2 pl-2"><img height="15px"
+                                                                       src="static/images/icons/layers.png" alt=""></i>
+                        in the top left corner
                         allows you to change the background map. By default a
                         landscape map based on OpenStreetMap by <a href="https://thunderforest.com" target="_blank">Thunderforest</a>
                         is active. Other options are satellite/aerial photographs from
-                        <a href="https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9" target="_blank">Esri</a> and
+                        <a href="https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9"
+                           target="_blank">Esri</a> and
                         the standard <a href="https://www.openstreetmap.org/" target="_blank">OpenStreetMap</a>.
                     </p>
                     <h4 id="mapSidebar">Sidebar</h4>
@@ -268,19 +333,23 @@
                     </p>
 
                     <p>
-                        If a grave's location is not documented then this <i class="far fa-eye-slash"></i> icon is displayed
+                        If a grave's location is not documented then this <i class="far fa-eye-slash"></i> icon is
+                        displayed
                         next to the name.
                     </p>
                     <p>
-                        By clicking the name in the sidebar further information on the grave and the contained burials and finds
+                        By clicking the name in the sidebar further information on the grave and the contained burials
+                        and finds
                         are shown. Also the respective grave is highlighted on the map.
                     </p>
                     <p>
-                        The <i class="btn-secondary btn-sm fas fa-info"></i> button opens a detailed summary of the grave's catalogue entry along with
+                        The <i class="btn-secondary btn-sm fas fa-info"></i> button opens a detailed summary of the
+                        grave's catalogue entry along with
                         all available images of the features and finds.
                     </p>
                     <div class="imagebox img-fluid">
-                    <img data-gifffer="static/images/manual/sidebar.gif" data-gifffer-width="100%" data-gifffer-height="auto">
+                        <img data-gifffer="static/images/manual/sidebar.gif" data-gifffer-width="100%"
+                             data-gifffer-height="auto">
                     </div>
 
                     <h4 id="mapSearch">Search</h4>
@@ -298,44 +367,144 @@
 
             <div class="pt-3" id="charts">
                 <div class="manualbox">
-
-                    <h3>Charts</h3>
+                    <h3 id="charts">Charts</h3>
                     <p>
                         THANADOS offers to visualise certain attributes of the cemetary data with various pre-defined
                         charts respectively plots.
-                        The <b>filter/select</b> menu on the top opens a list with all sites. Here you can select certain
-                        cemetaries by clicking on the respective switch to the left. By default ten cemetaries among those
+                        The <b>filter/select</b> menu on the top opens a list with all sites. Here you can select
+                        certain
+                        cemetaries by clicking on the respective switch to the left. By default ten cemetaries among
+                        those
                         with the highest number of graves are selected.
                     </p>
                     <p>You can filter the list by entering text (E.g. names or categories) into the <b>search field</b>
-                        and by adjusting the “begin” and “end” timespans of the respective sites with the <b>time sliders</b>.
+                        and by adjusting the “begin” and “end” timespans of the respective sites with the <b>time
+                            sliders</b>.
                         Furthermore, you also can sort the site list alphabetically by <b>name</b>, <b>type</b>,
                         <b>begin</b> or <b>end</b> time as well as by the count of <b>graves</b>.
-                        The list length can be adjusted at the top and you can select the list pages at the bottom of the
+                        The list length can be adjusted at the top and you can select the list pages at the bottom of
+                        the
                         list. By clicking on the <b>apply</b> button on the bottom right of the list, the charts with
                         the chosen sites will be created.
                     </p>
 
 
-
                     <p>
-                            <i class="btn-secondary btn-sm fas fa-expand-alt"></i> displays information on the
-                            copyright respectively a
-                            recommendation on how
-                            to cite this page.</p>
-                        <p>
-                            <i class="btn-secondary btn-sm fas fa-download"></i> saves a GeoJSON file of the entity to
-                            your computer.</p>
-                        <p>
-                            <span class="btn-secondary btn-sm">Map</span> opens the map of the cemetery containing the
-                            entity.
-                        </p>
-
-                    <p>
-                        You can toggle options like absolute values or percentage by clicking the top
-                        right buttons in the plots. Also you can turn datasets on or off by clicking the legend entries.
-                        If you hover the pointer over a certain plot element additional information is shown.
+                        <i class="btn-secondary btn-sm fas fa-expand-alt"></i> maximises the respective chart.
                     </p>
+                    <p>
+                        You can turn datasets on or off by clicking the legend entries.
+                        If you hover the cursor over a certain plot element additional information is shown.
+                    </p>
+
+                    <p>
+                        <span class="btn-secondary btn-xs">Σ</span> visualises the data as absolute values.
+                    </p>
+                    <p>
+                        <span class="btn-secondary btn-xs">%</span> visualises the data with percentage values.
+                    </p>
+                    <p>
+                        <span class="btn-secondary btn-xs">Violin</span> visualises the data where applicable as violin
+                        plot.
+                    </p>
+                    <p>
+                        <span class="btn-secondary btn-xs">Boxplot</span> visualises the data where applicable as
+                        boxplot.
+                    </p>
+
+
+                    <p>
+                        <i class="btn-secondary btn-sm fas fa-download"></i> offers you to download the chart as
+                        <i class="fas fa-download"></i> <b>jpg</b> respectively as <i class="fas fa-download"></i> <b>png</b>
+                        file.
+                    </p>
+                    <p>
+                        <i class="btn-secondary btn-sm fas fa-quote-right"></i> displays information on the
+                        copyright respectively a recommendation on how to cite this chart.
+                    </p>
+
+                    <h4 id="chartsDepth">Depth of graves</h4>
+                    <p>
+                        Here the count of graves with a certain depth is visualised as columns in 20 centimeter steps.
+                        Each cemetery is assigned an automatically defined colour.
+                    </p>
+
+                    <h4 id="chartsSex">Sex of individuals</h4>
+                    <p>
+                        Here for each cemetery an individual column is created showing the number of male burials in
+                        blue,
+                        female burials in orange and burials with unknown sex in red.
+                    </p>
+
+                    <h4 id="chartsOrientation">Orientation of skeletons</h4>
+                    <p>
+                        Here the count of skeletons with a certain orientation is visualised as columns in 20 degree
+                        steps.
+                        The data are derived from the orientations given in the underlying publications, measured by the
+                        excavators or entered by the respective user.
+                        The degrees refer to the position of the head of an
+                        individual (north: 0°/360°, east: 90°, south: 180° and west: 270° respectively)
+                        Each cemetery is assigned an automatically defined colour.
+                    </p>
+
+                    <h4 id="chartsAzimuth">Azimuth of gravepits</h4>
+                    <p>
+                        Here the count of gravepits with a certain orientation is visualised as columns in 10 degree
+                        steps.
+                        The orientations are automatically calculated from the polygons of the gravepits.
+                        The degrees refer to the deviation of the grave from north without considering the position
+                        of the head. The smaller deviation angle is used for this purpose.
+                        Thus a deviation ranging from 0 to 180 degrees is given here.
+                        Each cemetery is assigned an automatically defined colour.
+                    </p>
+
+                    <h4 id="chartsAge">Age at death</h4>
+                    <p>
+                        Here several columns are created indicating the number of individuals with their
+                        respective age at death.
+                        Taking the uncertainty of age determination into account, three columns are created for each
+                        cemetery. The minimum age is indicated in red, the average age in blue and the maximum age in
+                        orange.
+                        Additionally, you can choose between displaying the data as violin plot or as a boxplot.
+                    </p>
+
+                    <h4 id="chartsFeatures">Types of features</h4>
+                    <p>
+                        Here for each cemetery an individual column is created indicating the different types of features,
+                        usually the types of graves (e.g. single grave, grave with multiple burials, urn-burial),
+                        encountered at the chosen sites. The columns show the distribution
+                        of the different types for the respective cemetery, optionally in absolute or percentage values.
+                        Each feature type is assigned an automatically defined colour.
+                    </p>
+
+                    <h4 id="chartsConstruction">Grave construction</h4>
+                    <p>
+                        Here for each cemetery an individual column is created indicating the different types of grave
+                        construction (e.g. stone placement, earth pit, wooden coffin, cut in rock), encountered at the
+                        chosen sites. The columns show the occurrence of the different types of construction for the
+                        respective cemetery, optionally in absolute or percentage values. These are not excluding criteria,
+                        a grave can be assigned several construction types, for example a grave cut into the rock with
+                        wooden coffin and stone placement.
+                        Each feature type is assigned an automatically defined colour.
+                    </p>
+
+                    <h4 id="chartsFinds">Types of finds</h4>
+                    <p>
+                        Here for each cemetery an individual column is created indicating the different types of finds
+                        (e.g. knive, pottery, riding equipment, weapon), encountered at the chosen sites. The columns
+                        show the occurrence of the different types of finds for the respective cemetery, optionally in
+                        absolute or percentage values. Each type of find is assigned an automatically defined colour.
+                    </p>
+
+                    <h4 id="chartsBurials">Burial types</h4>
+                    <p>
+                        Here for each cemetery an individual column is created indicating the different types of burials
+                        (e.g. skeleton, cremation, bone deposition), encountered at the chosen sites. The columns
+                        show the occurrence of the different types of burials for the respective cemetery, optionally in
+                        absolute or percentage values. Each type of burial is assigned an automatically defined colour.
+                    </p>
+
+
                 </div>
             </div>
 
@@ -400,6 +569,7 @@
                         make sure
                         to possess the necessary rights and cite the original creators properly.
                     </p>
+
                 </div>
             </div>
 
@@ -426,11 +596,14 @@
 
                     <img class="img-fluid" src="/static/images/manual/hierarchy.jpg" alt="hierarchy">
                     <p>
-                        As THANADOS uses <a href="https://openatlas.eu" target="_blank">OpenAtlas</a> as backend for the data acquisition all
+                        As THANADOS uses <a href="https://openatlas.eu" target="_blank">OpenAtlas</a> as backend for the
+                        data acquisition all
                         underlying data are mapped as a network defined by classes and properties of the
-                        <a href="http://www.cidoc-crm.org/" target="_blank">CIDOC CRM</a>. If you want to learn more about the
+                        <a href="http://www.cidoc-crm.org/" target="_blank">CIDOC CRM</a>. If you want to learn more
+                        about the
                         backend data mappings see the
-                        <a href="https://redmine.openatlas.eu/projects/uni/wiki/Model_and_concept" target="_blank">OpenAtlas documentation</a>
+                        <a href="https://redmine.openatlas.eu/projects/uni/wiki/Model_and_concept" target="_blank">OpenAtlas
+                            documentation</a>
                     </p>
 
                 </div>
